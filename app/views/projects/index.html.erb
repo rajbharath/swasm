@@ -1,0 +1,24 @@
+<div class="row">
+  <h2 class="col s6 offset-s3">Projects</h2>
+  <% @projects.each do |project| %>
+    <div class="row">
+      <div class="col s10 m8 offset-s1 offset-m2">
+        <div class="card">
+          <div class="card-image">
+            <img src="http://www.thehindu.com/migration_catalog/article12251037.ece/BINARY/14TH_LAKE">
+            <span class="card-title"><%= project.title %></span>
+          </div>
+          <div class="card-content">
+            <p><%= project.description %></p>
+          </div>
+          <div class="card-action">
+            <%= link_to 'Edit', edit_project_path(project.id) %>
+            <a href="#">Delete</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to '<i class="material-icons">add</i>'.html_safe, new_project_path(@project), class: "btn-floating btn-large waves-effect waves-light red" %>

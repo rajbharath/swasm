@@ -24,6 +24,9 @@ gem 'uglifier', '>= 1.3.0'
 # Material design
 gem 'materialize-sass'
 
+# jQuery
+gem 'jquery-rails'
+
 # Authentication
 gem 'devise'
 

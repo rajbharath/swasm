@@ -1,0 +1,25 @@
+<div class="row">
+  <h2 class="col s6 offset-s3">New Project</h2>
+
+  <%= form_for @project, :html => {:class => 'col s6'} do |f| %>
+    <div class="row">
+      <div class="input-field col s12">
+        <%= f.text_field :title, class: "validate" %>
+        <%= f.label :title %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12">
+        <%= f.text_area :description, class: "materialize-textarea" %>
+        <%= f.label :description %>
+      </div>
+    </div>
+    <p>
+      <%= f.check_box :is_active %>
+      <%= f.label :is_active %>
+    </p>
+    <%= f.submit 'Create', class: 'waves-effect waves-light btn' %>
+  <% end %>
+
+</div>
