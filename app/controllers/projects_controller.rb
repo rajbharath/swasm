@@ -42,7 +42,7 @@ class ProjectsController < ApplicationController
 
   protected
   def project_params
-    params.require(:project).permit :title, :description, :is_active, :image
+    params.require(:project).permit :title, :description, :is_active, :location, :image
   end
 
 end

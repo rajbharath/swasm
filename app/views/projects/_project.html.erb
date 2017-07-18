@@ -7,6 +7,8 @@
       </div>
       <div class="card-content">
         <p><%= project.description %></p>
+        <p><%= project.location.latitude %></p>
+        <p><%= project.location.longitude %></p>
       </div>
       <div class="card-action">
         <%= link_to 'Edit', edit_project_path(project.id) %>

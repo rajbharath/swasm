@@ -12,6 +12,9 @@ gem 'rails', '~> 5.1.2'
 gem 'sqlite3'
 # Postgres
 gem 'pg'
+# Geo Spatial Support
+gem 'activerecord-postgis-adapter'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets

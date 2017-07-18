@@ -5,7 +5,10 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: postgresql
+  adapter: postgis
+  postgis_extension: postgis #default
+  postgis_schema: public #default
+  schema_search_path: public,postgis
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
   encoding: unicode
