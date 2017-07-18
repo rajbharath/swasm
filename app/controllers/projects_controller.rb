@@ -11,9 +11,10 @@ class ProjectsController < ApplicationController
 
   def create
     project = Project.new(project_params)
-    if project.save!
+    if project.save
       redirect_to action: :index
     else
+      flash[:error] = project.errors.full_messages
       redirect_to action: :new
     end
   end
@@ -24,9 +25,10 @@ class ProjectsController < ApplicationController
 
   def update
     project = Project.find_by(id: params[:id])
-    if project.update!(project_params)
+    if project.update(project_params)
       redirect_to action: :show, id: project.id
     else
+      flash[:error] = project.errors.full_messages
       redirect_to action: :edit
     end
   end
