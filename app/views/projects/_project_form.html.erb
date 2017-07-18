@@ -1,0 +1,31 @@
+<%= form_for project, :html => {:class => 'col s6'} do |f| %>
+  <div class="row">
+    <div class="input-field col s12">
+      <%= f.text_field :title, class: "validate" %>
+      <%= f.label :title %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="input-field col s12">
+      <%= f.text_area :description, class: "materialize-textarea" %>
+      <%= f.label :description %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="file-field input-field col s12">
+      <div class="btn">
+        <span>Image</span>
+        <%= f.file_field :image %>
+      </div>
+      <div class="file-path-wrapper">
+        <%= text_field_tag '', project.image_url.to_s, class: "file-path validate" %>
+      </div>
+    </div>
+  </div>
+  <p>
+    <%= f.check_box :is_active %>
+    <%= f.label :is_active %>
+  </p>
+  <%= f.submit action_text, class: 'waves-effect waves-light btn' %>
+<% end %>

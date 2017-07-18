@@ -36,16 +36,13 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
-    p '#####'
-    p params[:id]
-    p '#####'
     Project.destroy(params[:id])
     redirect_to projects_path
   end
 
   protected
   def project_params
-    params.require(:project).permit :title, :description, :is_active
+    params.require(:project).permit :title, :description, :is_active, :image
   end
 
 end
