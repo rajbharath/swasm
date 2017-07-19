@@ -5,3 +5,76 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+Project.destroy_all
+
+# Create Admin user
+User.create({
+    email: 'admin@smartcity.org',
+    password: 'passc0de',
+    password_confirmation: 'passc0de'
+  })
+
+# Create few projects
+Project.create([
+    {
+      title: 'Velachery Pond Restoration',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur.',
+      is_active: true,
+      image: Rails.root.join("db/seed_image/pond.jpg").open,
+      location: 'POINT (12.975971 80.221209)'
+    },
+    {
+      title: 'Shols Pond Restoration',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur.',
+      is_active: true,
+      image: Rails.root.join("db/seed_image/pond.jpg").open,
+      location: 'POINT (12.885963 80.232299)'
+    },
+    {
+      title: 'Shols Elcot Pond Restoration',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur.',
+      is_active: true,
+      image: Rails.root.join("db/seed_image/pond.jpg").open,
+      location: 'POINT (12.912694 80.223301)'
+    },
+    {
+      title: 'Mambakkam Pond Restoration',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur.',
+      is_active: true,
+      image: Rails.root.join("db/seed_image/pond.jpg").open,
+      location: 'POINT (12.835405 80.163361)'
+    },
+    {
+      title: 'Chrompet Pond Restoration',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur.',
+      is_active: true,
+      image: Rails.root.join("db/seed_image/pond.jpg").open,
+      location: 'POINT (12.953932 80.123082)'
+    }
+  ])
