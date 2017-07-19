@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require materialize-sprockets
 //= require_tree .
+//= require jquery.geocomplete.min
 

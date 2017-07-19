@@ -1,7 +1,8 @@
+<script src="http://maps.googleapis.com/maps/api/js?key=<%= Rails.configuration.keys[:google_api_key] %>&libraries=places" data-turbolinks-eval=false defer></script>
 <%= form_tag(projects_path, method: :get) do %>
   <div class="row">
     <div class="col s8 m6 offset-s1 offset-m2">
-        <%= text_field_tag :location %>
+        <%= text_field_tag :search_location, params[:search_location], placeholder: 'Type a location.. Ex. Velachery' %>
     </div>
     <div class="input-field col s2 m2">
       <%= submit_tag 'Search', class: 'waves-effect waves-light btn' %>

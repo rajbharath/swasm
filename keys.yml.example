@@ -1,0 +1,10 @@
+# Remove .example extension from file name
+
+development:
+  google_api_key: <<<YOUR GOOGLE API KEY>>>
+
+test:
+  google_api_key: <<<YOUR GOOGLE API KEY>>>
+
+production:
+  google_api_key: <<<YOUR GOOGLE API KEY>>>
