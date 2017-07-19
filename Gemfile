@@ -14,6 +14,7 @@ gem 'sqlite3'
 gem 'pg'
 # Geo Spatial Support
 gem 'activerecord-postgis-adapter'
+gem 'geocoder'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.7'

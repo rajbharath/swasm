@@ -2,7 +2,13 @@ class ProjectsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
 
   def index
-    @projects = Project.all
+    current_location = Geocoder.coordinates(params[:location]) if params[:location]
+    if current_location
+      @projects = Project.close_to(current_location[0], current_location[1], params[:within] || 2000)
+    else
+      @projects = Project.all
+    end
+    @projects
   end
 
   def new
