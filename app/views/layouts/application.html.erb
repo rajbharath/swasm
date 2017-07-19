@@ -32,4 +32,5 @@
       <%= yield %>
     </div>
   </body>
+  <script src="http://maps.googleapis.com/maps/api/js?key=<%= Rails.configuration.keys['google_api_key'] %>&libraries=places" data-turbolinks-track="reload"></script>
 </html>
