@@ -1,0 +1,9 @@
+<ul class="collection">
+  <li class="collection-item avatar">
+    <%= image_tag user.avatar_url(:thumb), alt: "", class: "circle" %>
+    <span class="title"><%= user.email %></span>
+    <p><%= user.roles.pluck(:name).join(", ") %></p>
+    <a href="#" class="secondary-content"><i class="material-icons">edit</i></a>
+  </li>
+</ul>
+

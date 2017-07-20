@@ -11,6 +11,7 @@ class Project < ApplicationRecord
   has_many :volunteers, through: :volunteerships, source: :user
   mount_uploader :image, ImageUploader
 
+  # For mapping user to a resource we resourcify a model
   resourcify
 
   scope :close_to, -> (latitude, longitude, distance_in_meters = 2000) {

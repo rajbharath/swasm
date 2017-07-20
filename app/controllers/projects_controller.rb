@@ -3,12 +3,17 @@ class ProjectsController < ApplicationController
   before_action :authorize_user_project, except: [:show, :index]
 
   def index
+    @projects = Project.all
+
+    if params[:user_id]
+      @projects = User.find(params[:user_id]).volunteering_projects
+    end
+
     current_location = Geocoder.coordinates(params[:search_location]) if params[:search_location]
     if current_location
       @projects = Project.close_to(current_location[0], current_location[1], params[:within] || 2000)
-    else
-      @projects = Project.all
     end
+
     @projects
   end
 

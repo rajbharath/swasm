@@ -14,8 +14,13 @@
         <a href="/" class="brand-logo">SmartCity</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <% if user_signed_in? %>
+            <% if policy(User).manage? %>
+              <li>
+                <%= link_to('Volunteers', volunteers_path) %>
+              </li>
+            <% end %>
             <li>
-              <%= link_to('My Projects') %>
+              <%= link_to('My Projects', user_projects_path(current_user)) %>
             </li>
             <li>
              <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
