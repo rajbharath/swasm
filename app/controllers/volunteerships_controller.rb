@@ -4,12 +4,12 @@ class VolunteershipsController < ApplicationController
   def create
     project = Project.find(params[:project_id])
     current_user.volunteering_projects << project if project and current_user.volunteering_projects.exclude? project
-    redirect_to project_path(project.id)
+    redirect_to user_projects_path(current_user)
   end
 
   def destroy
     project = Project.find(params[:project_id])
     current_user.volunteering_projects.delete(project) if project and current_user.volunteering_projects.include? project
-    redirect_to project_path(project.id)
+    redirect_to user_projects_path(current_user)
   end
 end
