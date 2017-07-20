@@ -4,13 +4,15 @@ class User < ApplicationRecord
   has_many :volunteerships
   has_many :volunteering_projects, through: :volunteerships, source: :project
 
+  mount_uploader :avatar, AvatarUploader
+
   rolify
 
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  validates_integrity_of  :avatar
+  validates_processing_of :avatar
 
   def set_default_role
     self.add_role :volunteer
