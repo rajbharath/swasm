@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   enum role: [:admin, :volunteer]
   after_initialize :set_default_role, :if => :new_record?
+  has_many :volunteerships
+  has_many :volunteering_projects, through: :volunteerships, source: :project
 
   rolify
 

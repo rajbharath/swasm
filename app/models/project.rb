@@ -7,6 +7,8 @@ class Project < ApplicationRecord
   validates :image, presence: true
   validates :location, presence: true
 
+  has_many :volunteerships
+  has_many :volunteers, through: :volunteerships, source: :user
   mount_uploader :image, ImageUploader
 
   resourcify
