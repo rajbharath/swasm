@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
+  before_action :authorize_user_project, except: [:show, :index]
 
   def index
     current_location = Geocoder.coordinates(params[:search_location]) if params[:search_location]
@@ -53,4 +54,7 @@ class ProjectsController < ApplicationController
     params.require(:project).permit :title, :description, :is_active, :location, :image
   end
 
+  def authorize_user_project
+    authorize Project
+  end
 end

@@ -5,15 +5,39 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.destroy_all
-Project.destroy_all
 
 # Create Admin user
-User.create({
-    email: 'admin@smartcity.org',
+admin = User.create!({
+    email: Rails.configuration.secrets['admin_email'],
+    password: Rails.configuration.secrets['password'],
+    password_confirmation: Rails.configuration.secrets['password']
+  })
+
+admin.add_role :admin
+
+# Create a volunteers
+User.create!([
+  {
+    email: 'v1@smartcity.org',
     password: 'passc0de',
     password_confirmation: 'passc0de'
-  })
+  },
+  {
+    email: 'v2@smartcity.org',
+    password: 'passc0de',
+    password_confirmation: 'passc0de'
+  },
+  {
+    email: 'v3@smartcity.org',
+    password: 'passc0de',
+    password_confirmation: 'passc0de'
+  },
+  {
+    email: 'v4@smartcity.org',
+    password: 'passc0de',
+    password_confirmation: 'passc0de'
+  }
+  ])
 
 # Create few projects
 Project.create([

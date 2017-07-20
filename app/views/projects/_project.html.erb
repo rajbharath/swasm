@@ -11,8 +11,11 @@
         <p><%= project.location.longitude %></p>
       </div>
       <div class="card-action">
-        <%= link_to 'Edit', edit_project_path(project.id) %>
-        <%= link_to 'Delete', project_path(project.id),  method: :delete %>
+        <% if policy(Project).manage? %>
+          <%= link_to 'Edit', edit_project_path(project.id) %>
+          <%= link_to 'Delete', project_path(project.id),  method: :delete %>
+        <% end %>
+        <%= link_to 'I\'m in', root_path %>
       </div>
     </div>
   </div>

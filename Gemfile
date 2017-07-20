@@ -31,8 +31,10 @@ gem 'materialize-sass'
 # jQuery
 gem 'jquery-rails'
 
-# Authentication
+# Authentication & Authorization
 gem 'devise'
+gem 'rolify'
+gem "pundit"
 
 # File Upload
 gem 'carrierwave', '~> 1.0'

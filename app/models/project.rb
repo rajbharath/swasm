@@ -6,7 +6,10 @@ class Project < ApplicationRecord
   validates :is_active, presence: true
   validates :image, presence: true
   validates :location, presence: true
+
   mount_uploader :image, ImageUploader
+
+  resourcify
 
   scope :close_to, -> (latitude, longitude, distance_in_meters = 2000) {
     where(%{

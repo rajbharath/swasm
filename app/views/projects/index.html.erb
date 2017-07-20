@@ -21,4 +21,6 @@
   <% end %>
 </div>
 
-<%= link_to '<i class="material-icons">add</i>'.html_safe, new_project_path, class: "btn-floating btn-large waves-effect waves-light red" %>
+<% if policy(Project).manage? %>
+  <%= link_to '<i class="material-icons">add</i>'.html_safe, new_project_path, class: "btn-floating btn-large waves-effect waves-light red" %>
+<% end %>
