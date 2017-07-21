@@ -18,4 +18,5 @@
 
 $(document).ready(function() {
    $(".button-collapse").sideNav();
+   $(".notification").on('click', function() { $(this).fadeOut(1000) })
 });

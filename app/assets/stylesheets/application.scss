@@ -4,3 +4,8 @@ $secondary-color: color("light-blue", "lighten-2") !default;
 @import "materialize";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 
+.notification {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+}
