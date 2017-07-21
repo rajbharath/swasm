@@ -12,8 +12,10 @@
 //
 //= require rails-ujs
 //= require jquery
-//= require turbolinks
 //= require materialize-sprockets
 //= require_tree .
 //= require jquery.geocomplete.min
 
+$(document).ready(function() {
+   $(".button-collapse").sideNav();
+});
