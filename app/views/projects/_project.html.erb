@@ -7,8 +7,6 @@
       </div>
       <div class="card-content">
         <p class="flow-text"><%= project.description %></p>
-        <p><%= project.location.latitude %></p>
-        <p><%= project.location.longitude %></p>
       </div>
       <div class="card-action">
         <% if current_user and policy(Project).manage? %>
@@ -20,6 +18,7 @@
         <% else %>
           <%= link_to 'Join us!', project_volunteerships_path(project), method: :post %>
         <% end %>
+        <%= link_to 'View in Map', "https://www.google.com/maps/search/?api=1&query=#{ project.location.longitude },#{project.location.latitude}", target: "_blank" %>
         <div class="chip">
           <%= project.volunteers.count %> volunteers
         </div>
