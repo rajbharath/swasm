@@ -1,7 +1,7 @@
-<%= form_for project, :html => {:class => 'col s12 m6'} do |f| %>
+<%= form_for project, :html => {:class => 'col s12 m6 left', multipart: true} do |f| %>
   <div class="row">
     <div class="input-field col s12">
-      <%= f.text_field :title, class: "validate" %>
+      <%= f.text_field :title, value: project.title %>
       <%= f.label :title %>
     </div>
   </div>
@@ -19,14 +19,19 @@
         <%= f.file_field :image %>
       </div>
       <div class="file-path-wrapper">
-        <%= text_field_tag '', project.image_url.to_s, class: "file-path validate" %>
+        <%= text_field_tag '', project.image_url.to_s, class: "file-path" %>
       </div>
     </div>
   </div>
   <div class="row">
-    <div class="input-field col s12">
-      <%= f.text_field :location %>
+    <div class="input-field col s10">
+      <%= f.text_field :location, readonly: '', class: 'black-text' %>
       <%= f.label :location %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s10">
+      <%= text_field_tag :location_name, '', readonly: '', class: 'black-text' %>
     </div>
   </div>
   <p>

@@ -4,6 +4,12 @@ $secondary-color: color("light-blue", "lighten-2") !default;
 @import "materialize";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 
+.modal {
+  &.bottom-sheet {
+    max-height: 75%;
+  }
+}
+
 .notification {
   position: fixed;
   top: 70px;
