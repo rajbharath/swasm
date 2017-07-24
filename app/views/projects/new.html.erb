@@ -10,14 +10,12 @@
   <div class="modal-content">
     <h4>Choose project location</h4>
     <div class="row">
-      <%= text_field_tag :enter_location, params[:enter_location], placeholder: 'Type a location.. Ex. Velachery',  class: "col s12 m6 offset-m3" %>
+      <%= text_field_tag :enter_location, params[:enter_location], placeholder: 'Type a location.. Ex. Velachery',  class: "col s10 m6 offset-m2" %>
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat col s2 m2">Done</a>
     </div>
     <div class="row">
       <div id="map" class="col s12 m10 offset-m1" style="height: 300px"></div>
     </div>
-  </div>
-  <div class="modal-footer">
-    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Ok</a>
   </div>
 </div>
 
