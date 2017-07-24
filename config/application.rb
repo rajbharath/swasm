@@ -11,7 +11,7 @@ module SmartCity
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
     config.sass.preferred_syntax = :scss
-    config.keys = config_for(:keys)
+    config.google_api_key = ENV["GOOGLE_API_KEY"]
     config.secrets = config_for(:secrets)
 
     # Settings in config/environments/* take precedence over those specified here.

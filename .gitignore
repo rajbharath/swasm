@@ -27,6 +27,3 @@ public/uploads/
 
 # Ignore mac junks
 .DS_Store
-
-# Ignore keys files
-config/keys.yml
