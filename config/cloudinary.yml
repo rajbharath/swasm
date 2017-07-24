@@ -1,0 +1,14 @@
+development:
+  cloud_name: <%= ENV.fetch('CLOUD_NAME', "") %>
+  api_key: <%= ENV.fetch('API_KEY', "") %>
+  api_secret: <%= ENV.fetch('API_SECRET', "") %>
+
+test:
+  cloud_name: <%= ENV.fetch('CLOUD_NAME', "") %>
+  api_key: <%= ENV.fetch('API_KEY', "") %>
+  api_secret: <%= ENV.fetch('API_SECRET', "") %>
+
+production:
+  cloud_name: <%= ENV.fetch('CLOUD_NAME', "") %>
+  api_key: <%= ENV.fetch('API_KEY', "") %>
+  api_secret: <%= ENV.fetch('API_SECRET', "") %>
