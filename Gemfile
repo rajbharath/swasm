@@ -34,7 +34,7 @@ gem 'jquery-rails'
 # Authentication & Authorization
 gem 'devise'
 gem 'rolify'
-gem "pundit"
+gem 'pundit'
 
 # File Upload
 gem 'carrierwave', '~> 1.0'
@@ -69,5 +69,8 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
 end
 
+group :test do
+  gem 'rake'
+end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
