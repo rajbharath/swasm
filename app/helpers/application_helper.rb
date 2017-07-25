@@ -8,6 +8,10 @@ module ApplicationHelper
         current_page? user_projects_path(current_user.id)
       when 'volunteers'
         current_page? volunteers_path
+      when 'login'
+        current_page? new_user_session_path
+      when 'logout'
+        current_page? destroy_user_session_path
       when 'about', 'contact'
         current_page? page_path(menu_item_name)
     end
