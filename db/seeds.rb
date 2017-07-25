@@ -42,63 +42,45 @@ User.create!([
 # Create few projects
 Project.create([
     {
-      title: 'Velachery Pond Restoration',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.',
+      title: 'Oma Kulam',
+      description: 'Oma Kulam is a pond situated in Madhavaram Zone of Greater Chennai Corporation.',
       is_active: true,
-      image: Rails.root.join("db/seed_image/pond.jpg").open,
-      location: 'POINT (12.975971 80.221209)'
+      image: Rails.root.join("db/seed_image/omakulam.jpg").open,
+      location: 'POINT (13.154747 80.225952)'
     },
     {
-      title: 'Shols Pond Restoration',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.',
+      title: 'Aavin Pond',
+      description: 'Aavin Pond has been chosen for restoration by CMWSSB as part of the Sustainable Water Mission.',
       is_active: true,
-      image: Rails.root.join("db/seed_image/pond.jpg").open,
-      location: 'POINT (12.885963 80.232299)'
+      image: Rails.root.join("db/seed_image/aavinpond.jpg").open,
+      location: 'POINT (13.150860 80.242396)'
     },
     {
-      title: 'Shols Elcot Pond Restoration',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.',
+      title: 'Savadi Kulam',
+      description: 'Savadi Kulam has been chosen for restoration by CMWSSB as part of the Sustainable Water Mission.',
       is_active: true,
-      image: Rails.root.join("db/seed_image/pond.jpg").open,
-      location: 'POINT (12.912694 80.223301)'
+      image: Rails.root.join("db/seed_image/savadikulam.jpg").open,
+      location: 'POINT (13.132679 80.196302)'
     },
     {
-      title: 'Mambakkam Pond Restoration',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.',
+      title: 'Chettimedu Sakthi Amman Koil Street Pond',
+      description: 'Chettimedu Sakthi Amman Koil Street Pond has been chosen for restoration by CMWSSB as part of the Sustainable Water Mission.',
       is_active: true,
-      image: Rails.root.join("db/seed_image/pond.jpg").open,
-      location: 'POINT (12.835405 80.163361)'
+      image: Rails.root.join("db/seed_image/chettimedu.jpg").open,
+      location: 'POINT (13.178309 80.202723)'
     },
     {
-      title: 'Chrompet Pond Restoration',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.',
+      title: 'Vadaperumbakkam Pond',
+      description: 'Vadaperumbakkam Pond has been chosen for restoration by CMWSSB as part of the Sustainable Water Mission.',
       is_active: true,
-      image: Rails.root.join("db/seed_image/pond.jpg").open,
-      location: 'POINT (12.953932 80.123082)'
+      image: Rails.root.join("db/seed_image/vadaperumbakkam.jpg").open,
+      location: 'POINT (13.181542 80.229921)'
+    },
+    {
+      title: 'Panda Kulam',
+      description: 'Panda Kulam has been chosen for restoration by CMWSSB as part of the Sustainable Water Mission.',
+      is_active: true,
+      image: Rails.root.join("db/seed_image/pandakulam.jpg").open,
+      location: 'POINT (13.152983 80.227328)'
     }
   ])
