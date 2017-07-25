@@ -1,7 +1,7 @@
 # README
 
 [![Build Status](https://travis-ci.org/rajbharath/swasm.svg?branch=master)](https://travis-ci.org/rajbharath/swasm)
-[![Code Climate](https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg)](https://codeclimate.com/github/codeclimate/codeclimate)
+[![Code Climate](https://codeclimate.com/github/rajbharath/swasm/badges/gpa.svg)](https://codeclimate.com/github/rajbharath/swasm)
 
 This project is for volunteer management system as part of smart city initiative in Chennai. It can evolve into complete package for all sort of smart city activities.
 
