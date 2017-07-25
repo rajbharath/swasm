@@ -96,6 +96,7 @@ GEM
     geocoder (1.4.4)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
+    high_voltage (3.0.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     i18n (0.8.6)
@@ -245,6 +246,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   geocoder
+  high_voltage
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)

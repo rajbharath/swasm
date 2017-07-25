@@ -8,6 +8,8 @@ module ApplicationHelper
         current_page? user_projects_path(current_user.id)
       when 'volunteers'
         current_page? volunteers_path
+      when 'about', 'contact'
+        current_page? page_path(menu_item_name)
     end
   end
 end

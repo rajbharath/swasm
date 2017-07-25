@@ -9,23 +9,27 @@
   </head>
 
   <body>
-    <nav>
-      <div class="nav-wrapper">
-        <a href="/" class="brand-logo">SWASM</a>
-        <a href="#!" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-        <%= render partial: 'layouts/navigations', locals: { id: "nav", class_names: "right hide-on-med-and-down" } %>
-        <%= render partial: 'layouts/navigations', locals: { id: "nav-mobile", class_names: "side-nav" } %>
-      </div>
-    </nav>
-    <div class="container">
-      <% flash.each do |key, value| %>
-        <div class="notification card-panel grey darken-4 white-text right z-depth-4" id="<%= key %>">
-          <%= value %>
-          <i class="close material-icons">close</i>
+    <header>
+      <nav>
+        <div class="nav-wrapper">
+          <a href="/" class="brand-logo">SWASM</a>
+          <a href="#!" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+          <%= render partial: 'layouts/navigations', locals: { id: "nav", class_names: "right hide-on-med-and-down" } %>
+          <%= render partial: 'layouts/navigations', locals: { id: "nav-mobile", class_names: "side-nav" } %>
         </div>
-      <% end %>
-      <%= yield %>
-    </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <% flash.each do |key, value| %>
+          <div class="notification card-panel grey darken-4 white-text right z-depth-4" id="<%= key %>">
+            <%= value %>
+            <i class="close material-icons">close</i>
+          </div>
+        <% end %>
+        <%= yield %>
+      </div>
+    </main>
     <footer class="page-footer">
       <div class="container">
         <div class="row">
@@ -36,10 +40,9 @@
           <div class="col l4 offset-l2 s12">
             <h5 class="white-text">Links</h5>
             <ul>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+              <li>
+                <%= link_to 'Partners', page_path('partners'), class: 'grey-text text-lighten-3' %>
+              </li>
             </ul>
           </div>
         </div>

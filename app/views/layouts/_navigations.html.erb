@@ -2,6 +2,12 @@
   <li class="<%= menu_active?('home') ? 'active' : nil %>" >
     <%= link_to 'Home', root_path %>
   </li>
+  <li class="<%= menu_active?('about') ? 'active' : nil %>" >
+    <%= link_to 'About', page_path('about') %>
+  </li>
+  <li class="<%= menu_active?('contact') ? 'active' : nil %>" >
+    <%= link_to 'Contact Us', page_path('contact') %>
+  </li>
   <% if user_signed_in? %>
     <% if policy(User).manage? %>
       <li class="<%= menu_active?('volunteers') ? 'active' : nil %>" >
