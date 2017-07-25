@@ -9,18 +9,22 @@
         <p class="flow-text"><%= project.description %></p>
       </div>
       <div class="card-action">
-        <% if current_user and policy(Project).manage? %>
-          <%= link_to 'Edit', edit_project_path(project.id) %>
-          <%= link_to 'Delete', project_path(project.id),  method: :delete %>
-        <% end %>
-        <% if project.volunteers.include? current_user %>
-          <%= link_to 'I leave!', project_volunteership_path(project, current_user), method: :delete %>
-        <% else %>
-          <%= link_to 'Join us!', project_volunteerships_path(project), method: :post %>
-        <% end %>
-        <%= link_to 'View in Map', "https://www.google.com/maps/search/?api=1&query=#{ project.location.longitude },#{project.location.latitude}", target: "_blank" %>
-        <div class="chip">
-          <%= project.volunteers.count %> volunteers
+        <div class="left-align left">
+          <% if project.volunteers.include? current_user %>
+            <%= link_to 'I leave!', project_volunteership_path(project, current_user), method: :delete %>
+          <% else %>
+            <%= link_to 'Join us!', project_volunteerships_path(project), method: :post %>
+          <% end %>
+          <div class="chip">
+            <%= project.volunteers.count %> volunteers
+          </div>
+        </div>
+        <div class="right-align">
+          <% if current_user and policy(Project).manage? %>
+            <%= link_to 'Edit', edit_project_path(project.id) %>
+            <%= link_to 'Delete', project_path(project.id),  method: :delete %>
+          <% end %>
+          <%= link_to '<i class="material-icons">arrow_forward</i>'.html_safe, project_path(project.id),  method: :get %>
         </div>
       </div>
     </div>

@@ -46,41 +46,83 @@ Project.create([
       description: 'Oma Kulam is a pond situated in Madhavaram Zone of Greater Chennai Corporation.',
       is_active: true,
       image: Rails.root.join("db/seed_image/omakulam.jpg").open,
-      location: 'POINT (13.154747 80.225952)'
+      location: 'POINT (13.154747 80.225952)',
+      specifications: {
+        area: 8093.71,
+        budget: 6,
+        bod: 3,
+        ph: 6.3,
+        cod: 3
+      }
     },
     {
       title: 'Aavin Pond',
       description: 'Aavin Pond has been chosen for restoration by CMWSSB as part of the Sustainable Water Mission.',
       is_active: true,
       image: Rails.root.join("db/seed_image/aavinpond.jpg").open,
-      location: 'POINT (13.150860 80.242396)'
+      location: 'POINT (13.150860 80.242396)',
+      specifications: {
+        area: 8093.71,
+        budget: 6,
+        bod: 3,
+        ph: 6.3,
+        cod: 3
+      }
     },
     {
       title: 'Savadi Kulam',
       description: 'Savadi Kulam has been chosen for restoration by CMWSSB as part of the Sustainable Water Mission.',
       is_active: true,
       image: Rails.root.join("db/seed_image/savadikulam.jpg").open,
-      location: 'POINT (13.132679 80.196302)'
+      location: 'POINT (13.132679 80.196302)',
+      specifications: {
+        area: 8093.71,
+        budget: 6,
+        bod: 3,
+        ph: 6.3,
+        cod: 3
+      }
     },
     {
       title: 'Chettimedu Sakthi Amman Koil Street Pond',
       description: 'Chettimedu Sakthi Amman Koil Street Pond has been chosen for restoration by CMWSSB as part of the Sustainable Water Mission.',
       is_active: true,
       image: Rails.root.join("db/seed_image/chettimedu.jpg").open,
-      location: 'POINT (13.178309 80.202723)'
+      location: 'POINT (13.178309 80.202723)',
+      specifications: {
+        area: 8093.71,
+        budget: 6,
+        bod: 3,
+        ph: 6.3,
+        cod: 3
+      }
     },
     {
       title: 'Vadaperumbakkam Pond',
       description: 'Vadaperumbakkam Pond has been chosen for restoration by CMWSSB as part of the Sustainable Water Mission.',
       is_active: true,
       image: Rails.root.join("db/seed_image/vadaperumbakkam.jpg").open,
-      location: 'POINT (13.181542 80.229921)'
+      location: 'POINT (13.181542 80.229921)',
+      specifications: {
+        area: 8093.71,
+        budget: 6,
+        bod: 3,
+        ph: 6.3,
+        cod: 3
+      }
     },
     {
       title: 'Panda Kulam',
       description: 'Panda Kulam has been chosen for restoration by CMWSSB as part of the Sustainable Water Mission.',
       is_active: true,
       image: Rails.root.join("db/seed_image/pandakulam.jpg").open,
-      location: 'POINT (13.152983 80.227328)'
+      location: 'POINT (13.152983 80.227328)',
+      specifications: {
+        area: 8093.71,
+        budget: 6,
+        bod: 3,
+        ph: 6.3,
+        cod: 3
+      }
     }
   ])
