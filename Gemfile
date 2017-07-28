@@ -33,6 +33,9 @@ gem 'materialize-sass'
 # jQuery
 gem 'jquery-rails'
 
+# recaptcha
+gem 'recaptcha', require: 'recaptcha/rails'
+
 # Authentication & Authorization
 gem 'devise'
 gem 'rolify'

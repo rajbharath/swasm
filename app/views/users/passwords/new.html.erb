@@ -1,26 +1,29 @@
 <div class="row">
-  <h2 class="col offset-s3">Forgot your password?</h2>
-
-
-  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-    <%= devise_error_messages! %>
-
-  <div class="section">
-    <div class="field col s6 offset-s3">
-      <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true %>
-    </div>
+  <div class="col s12 offset-s3">
+    <h2 class="title">Forgot your password?</h2>
   </div>
-  <div class="section">
-    <div class="actions col offset-s3">
-      <%= f.submit "Send me reset password instructions", class: 'waves-effect waves-light btn' %>
-    </div>
-  </div>
+</div>
 
-  <% end %>
-  <div class="section">
-    <div class="col s6 offset-s3">
-      <%= render "users/shared/links" %>
-    </div>
+<div class="row">
+  <div class="col s12 m6 offset-m3 framed-form">
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+      <%= devise_error_messages! %>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="actions col s12">
+          <%= f.submit "Send me reset password instructions", class: 'waves-effect waves-light btn' %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6">
+          <%= render "users/shared/links" %>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>

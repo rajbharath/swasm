@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col s12 m10 offset-m1">
+  <div class="col s12 m8">
     <div class="card">
       <div class="card-image">
         <%= image_tag(project.image) %>
@@ -14,59 +14,6 @@
           <%= link_to 'Edit', edit_project_path(project.id) %>
           <%= link_to 'Delete', project_path(project.id),  method: :delete %>
         <% end %>
-        <% if project.volunteers.include? current_user %>
-          <%= link_to 'I leave!', project_volunteership_path(project, current_user), method: :delete %>
-        <% else %>
-          <%= link_to 'Join us!', project_volunteerships_path(project), method: :post %>
-        <% end %>
-        <%= link_to 'View in Map', "https://www.google.com/maps/search/?api=1&query=#{ project.location.longitude },#{project.location.latitude}", target: "_blank" %>
-        <div class="chip">
-          <%= project.volunteers.count %> volunteers
-        </div>
-      </div>
-    </div>
-
-     <div class="row">
-
-      <div class="col s6">
-        <div class="card blue-grey lighten-5">
-          <div class="card-content center-align">
-            <span>Area</span>
-            <h3><%= project.specifications[:area] %> (Sq.m)</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col s6">
-        <div class="card blue-grey lighten-5">
-          <div class="card-content center-align">
-            <span>BOD</span>
-            <h3><%= project.specifications[:bod] %></h3>
-          </div>
-        </div>
-      </div>
-      <div class="col s6">
-        <div class="card blue-grey lighten-5">
-          <div class="card-content center-align">
-            <span>COD</span>
-            <h3><%= project.specifications[:cod] %></h3>
-          </div>
-        </div>
-      </div>
-      <div class="col s6">
-        <div class="card blue-grey lighten-5">
-          <div class="card-content center-align">
-            <span>Ph</span>
-            <h3><%= project.specifications[:ph] %></h3>
-          </div>
-        </div>
-      </div>
-      <div class="col s6">
-        <div class="card blue-grey lighten-5">
-          <div class="card-content center-align">
-            <span>Budget</span>
-            <h3><%= project.specifications[:budget] %></h3>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -75,5 +22,44 @@
         <%= render partial: 'users/user', locals: { user: volunteer } %>
       <% end %>
     <% end %>
+  </div>
+  <div class="col s12 m4">
+    <% if project.volunteers.exclude? current_user %>
+      <%= link_to 'Contribute Now!', project_volunteerships_path(project), method: :post, class: 'btn waves-effect waves-light btn-large', id:'contribute-btn' %>
+    <% else %>
+      <span class="btn-large" id="contribute-btn">You're Awesome!</span>
+    <% end %>
+    <div class="card">
+      <div class="card-content center-align">
+        <div class="row">
+          <div class="col info-box">
+            <h4><%= project.specifications[:area] %></h4>
+            <span>Area</span>
+          </div>
+          <div class="col info-box">
+            <h4><%= project.specifications[:bod] %></h4>
+            <span>BOD</span>
+          </div>
+          <div class="col info-box">
+            <h4><%= project.specifications[:cod] %></h4>
+            <span>COD</span>
+          </div>
+          <div class="col info-box">
+            <h4><%= project.specifications[:ph] %></h4>
+            <span>Ph</span>
+          </div>
+          <div class="col info-box">
+            <h4><%= project.specifications[:budget] %></h4>
+            <span>Budget</span>
+          </div>
+        </div>
+      </div>
+      <div class="card-action">
+        <% if project.volunteers.include? current_user %>
+          <%= link_to 'I leave!', project_volunteership_path(project, current_user), method: :delete %>
+        <% end %>
+        <%= link_to 'Go To Map', "https://www.google.com/maps/search/?api=1&query=#{ project.location.longitude },#{project.location.latitude}", target: "_blank" %>
+      </div>
+    </div>
   </div>
 </div>
