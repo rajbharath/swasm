@@ -1,10 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# ruby encoding: utf-8
 
 # Create Admin user
 admin = User.create!({
@@ -54,7 +48,24 @@ Project.create([
         bod: 3,
         ph: 6.3,
         cod: 3
-      }
+      },
+      events: Event.create([
+              {
+                title: 'Initial Assessment',
+                description: 'Kulam was assessed to determine the various interventions required for the restoration.',
+                start_date: Time.new
+              },
+              {
+                title: 'Initial Planning',
+                description: 'Budget has been allocated for removing the debris',
+                start_date: Time.new
+              },
+              {
+                title: 'Debris Removal',
+                description: 'Debris got removed by volunteers. It is an awesome contribution from our citizen',
+                start_date: Time.new
+              }
+            ])
     },
     {
       title: 'Aavin Pond',
@@ -69,7 +80,24 @@ Project.create([
         bod: 3,
         ph: 6.3,
         cod: 3
-      }
+      },
+      events: Event.create([
+              {
+                title: 'Initial Assessment',
+                description: 'Kulam was assessed to determine the various interventions required for the restoration.',
+                start_date: Time.new
+              },
+              {
+                title: 'Initial Planning',
+                description: 'Budget has been allocated for removing the debris',
+                start_date: Time.new
+              },
+              {
+                title: 'Debris Removal',
+                description: 'Debris got removed by volunteers. It is an awesome contribution from our citizen',
+                start_date: Time.new
+              }
+            ])
     },
     {
       title: 'Savadi Kulam',
@@ -84,7 +112,24 @@ Project.create([
         bod: 3,
         ph: 6.3,
         cod: 3
-      }
+      },
+      events: Event.create([
+              {
+                title: 'Initial Assessment',
+                description: 'Kulam was assessed to determine the various interventions required for the restoration.',
+                start_date: Time.new
+              },
+              {
+                title: 'Initial Planning',
+                description: 'Budget has been allocated for removing the debris',
+                start_date: Time.new
+              },
+              {
+                title: 'Debris Removal',
+                description: 'Debris got removed by volunteers. It is an awesome contribution from our citizen',
+                start_date: Time.new
+              }
+            ])
     },
     {
       title: 'Chettimedu Sakthi Amman Koil Street Pond',
@@ -99,7 +144,24 @@ Project.create([
         bod: 3,
         ph: 6.3,
         cod: 3
-      }
+      },
+      events: Event.create([
+              {
+                title: 'Initial Assessment',
+                description: 'Kulam was assessed to determine the various interventions required for the restoration.',
+                start_date: Time.new
+              },
+              {
+                title: 'Initial Planning',
+                description: 'Budget has been allocated for removing the debris',
+                start_date: Time.new
+              },
+              {
+                title: 'Debris Removal',
+                description: 'Debris got removed by volunteers. It is an awesome contribution from our citizen',
+                start_date: Time.new
+              }
+            ])
     },
     {
       title: 'Vadaperumbakkam Pond',
@@ -114,7 +176,24 @@ Project.create([
         bod: 3,
         ph: 6.3,
         cod: 3
-      }
+      },
+      events: Event.create([
+              {
+                title: 'Initial Assessment',
+                description: 'Kulam was assessed to determine the various interventions required for the restoration.',
+                start_date: Time.new
+              },
+              {
+                title: 'Initial Planning',
+                description: 'Budget has been allocated for removing the debris',
+                start_date: Time.new
+              },
+              {
+                title: 'Debris Removal',
+                description: 'Debris got removed by volunteers. It is an awesome contribution from our citizen',
+                start_date: Time.new
+              }
+            ])
     },
     {
       title: 'Panda Kulam',
@@ -129,6 +208,23 @@ Project.create([
         bod: 3,
         ph: 6.3,
         cod: 3
-      }
+      },
+      events: Event.create([
+              {
+                title: 'Initial Assessment',
+                description: 'Kulam was assessed to determine the various interventions required for the restoration.',
+                start_date: Time.new
+              },
+              {
+                title: 'Initial Planning',
+                description: 'Budget has been allocated for removing the debris',
+                start_date: Time.new
+              },
+              {
+                title: 'Debris Removal',
+                description: 'Debris got removed by volunteers. It is an awesome contribution from our citizen',
+                start_date: Time.new
+              }
+            ])
     }
   ])
