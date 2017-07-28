@@ -44,6 +44,7 @@ Project.create([
     {
       title: 'Oma Kulam',
       description: 'Oma Kulam is a pond situated in Madhavaram Zone of Greater Chennai Corporation.',
+      plan: "1. Desilting, Deepening & Bund Strengthening \n2. Revetment \n3. Fence & Gate \n4. Pathway, Inlet & Outlet \n5. Rain Water Harvesting \n6. Technical Monitoring",
       is_active: true,
       image: Rails.root.join("db/seed_image/omakulam.jpg").open,
       location: 'POINT (13.154747 80.225952)',
@@ -58,6 +59,7 @@ Project.create([
     {
       title: 'Aavin Pond',
       description: 'Aavin Pond has been chosen for restoration by CMWSSB as part of the Sustainable Water Mission.',
+      plan: "1. Desilting, Deepening & Bund Strengthening \n2. Revetment \n3. Fence & Gate \n4. Pathway, Inlet & Outlet \n5. Rain Water Harvesting \n6. Technical Monitoring",
       is_active: true,
       image: Rails.root.join("db/seed_image/aavinpond.jpg").open,
       location: 'POINT (13.150860 80.242396)',
@@ -72,6 +74,7 @@ Project.create([
     {
       title: 'Savadi Kulam',
       description: 'Savadi Kulam has been chosen for restoration by CMWSSB as part of the Sustainable Water Mission.',
+      plan: "1. Desilting, Deepening & Bund Strengthening \n2. Revetment \n3. Fence & Gate \n4. Pathway, Inlet & Outlet \n5. Rain Water Harvesting \n6. Technical Monitoring",
       is_active: true,
       image: Rails.root.join("db/seed_image/savadikulam.jpg").open,
       location: 'POINT (13.132679 80.196302)',
@@ -86,6 +89,7 @@ Project.create([
     {
       title: 'Chettimedu Sakthi Amman Koil Street Pond',
       description: 'Chettimedu Sakthi Amman Koil Street Pond has been chosen for restoration by CMWSSB as part of the Sustainable Water Mission.',
+      plan: "1. Desilting, Deepening & Bund Strengthening \n2. Revetment \n3. Fence & Gate \n4. Pathway, Inlet & Outlet \n5. Rain Water Harvesting \n6. Technical Monitoring",
       is_active: true,
       image: Rails.root.join("db/seed_image/chettimedu.jpg").open,
       location: 'POINT (13.178309 80.202723)',
@@ -100,6 +104,7 @@ Project.create([
     {
       title: 'Vadaperumbakkam Pond',
       description: 'Vadaperumbakkam Pond has been chosen for restoration by CMWSSB as part of the Sustainable Water Mission.',
+      plan: "1. Desilting, Deepening & Bund Strengthening \n2. Revetment \n3. Fence & Gate \n4. Pathway, Inlet & Outlet \n5. Rain Water Harvesting \n6. Technical Monitoring",
       is_active: true,
       image: Rails.root.join("db/seed_image/vadaperumbakkam.jpg").open,
       location: 'POINT (13.181542 80.229921)',
@@ -114,6 +119,7 @@ Project.create([
     {
       title: 'Panda Kulam',
       description: 'Panda Kulam has been chosen for restoration by CMWSSB as part of the Sustainable Water Mission.',
+      plan: "1. Desilting, Deepening & Bund Strengthening \n2. Revetment \n3. Fence & Gate \n4. Pathway, Inlet & Outlet \n5. Rain Water Harvesting \n6. Technical Monitoring",
       is_active: true,
       image: Rails.root.join("db/seed_image/pandakulam.jpg").open,
       location: 'POINT (13.152983 80.227328)',

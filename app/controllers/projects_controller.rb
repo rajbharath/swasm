@@ -56,7 +56,7 @@ class ProjectsController < ApplicationController
 
   protected
   def project_params
-    params.require(:project).permit :title, :description, :is_active, :location, :image
+    params.require(:project).permit :title, :description, :is_active, :location, :image, :plan
   end
 
   def authorize_user_project

@@ -1,42 +1,63 @@
-<%= form_for project, :html => {:class => 'col s12 m6 left', multipart: true} do |f| %>
-  <div class="row">
-    <div class="input-field col s12">
-      <%= f.text_field :title, value: project.title %>
-      <%= f.label :title %>
-    </div>
-  </div>
+<div class="row">
+  <div class="col s12 framed-form">
+    <%= form_for project, html: { multipart: true } do |f| %>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= f.text_field :title, value: project.title %>
+          <%= f.label :title %>
+        </div>
+      </div>
 
-  <div class="row">
-    <div class="input-field col s12">
-      <%= f.text_area :description, class: "materialize-textarea" %>
-      <%= f.label :description %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="file-field input-field col s12">
-      <div class="btn">
-        <span>Image</span>
-        <%= f.file_field :image %>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= f.text_area :description, class: "materialize-textarea" %>
+          <%= f.label :description %>
+        </div>
       </div>
-      <div class="file-path-wrapper">
-        <%= text_field_tag '', project.image_url.to_s, class: "file-path" %>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= f.text_area :plan, class: "materialize-textarea" %>
+          <%= f.label :plan %>
+        </div>
       </div>
-    </div>
+      <div class="row">
+        <div class="file-field input-field col s12">
+          <div class="btn">
+            <span>Image</span>
+            <%= f.file_field :image %>
+          </div>
+          <div class="file-path-wrapper">
+            <%= text_field_tag '', project.image_url.to_s, class: "file-path" %>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= f.text_field :location, readonly: '', class: 'black-text' %>
+          <%= f.label :location %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= text_field_tag :location_name, '', readonly: '', class: 'black-text' %>
+          <%= label_tag :location_name %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <p>
+            <%= f.check_box :is_active %>
+            <%= f.label :is_active %>
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="actions col s12">
+          <%= f.submit action_text, class: 'waves-effect waves-light btn' %>
+        </div>
+      </div>
+
+    <% end %>
   </div>
-  <div class="row">
-    <div class="input-field col s10">
-      <%= f.text_field :location, readonly: '', class: 'black-text' %>
-      <%= f.label :location %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="input-field col s10">
-      <%= text_field_tag :location_name, '', readonly: '', class: 'black-text' %>
-    </div>
-  </div>
-  <p>
-    <%= f.check_box :is_active %>
-    <%= f.label :is_active %>
-  </p>
-  <%= f.submit action_text, class: 'waves-effect waves-light btn' %>
-<% end %>
+</div>

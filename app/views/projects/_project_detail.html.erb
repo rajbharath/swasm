@@ -9,6 +9,9 @@
         <p><%= project.location.latitude %></p>
         <p><%= project.location.longitude %></p>
       </div>
+      <div class="card-content">
+        <p><%= simple_format(project.plan) %></p>
+      </div>
       <div class="card-action">
         <% if current_user and policy(Project).manage? %>
           <%= link_to 'Edit', edit_project_path(project.id) %>

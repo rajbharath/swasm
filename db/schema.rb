@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20170725075041) do
     t.string "image"
     t.geography "location", limit: {:srid=>4326, :type=>"st_point", :geographic=>true}
     t.hstore "specifications"
+    t.text "plan"
     t.index ["location"], name: "index_projects_on_location", using: :gist
     t.index ["specifications"], name: "index_projects_on_specifications", using: :gin
   end

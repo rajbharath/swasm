@@ -14,7 +14,7 @@
       <span class="trending">No Projects found. <%= link_to 'Choose from All', root_path() %></span>
     <% else %>
       <% unless current_user and current_page? user_projects_path(current_user) %>
-        <span class="trending"><%= @projects.count %> opportunities to volunteer</span>
+        <span class="trending"><%= pluralize(@projects.count, 'opportunities') %> to volunteer</span>
       <% end %>
     <% end %>
   </div>
