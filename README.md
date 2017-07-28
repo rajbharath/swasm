@@ -33,7 +33,9 @@ hstore
 * Deployment instructions
   ``` git push prod master ```
 
-* ...
+* Livereload during development
+  ``` cd project_folder ```
+  ``` gaurd ```
 
 * Contribution
 * License
