@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     resources :projects, only: [:index, :show]
   end
   resources :projects do
+    resources :events
     resources :volunteerships, only: [:create, :destroy]
   end
 end

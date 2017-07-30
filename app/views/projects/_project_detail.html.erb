@@ -64,19 +64,34 @@
         <%= link_to 'Go To Map', "https://www.google.com/maps/search/?api=1&query=#{ project.location.longitude },#{project.location.latitude}", target: "_blank" %>
       </div>
     </div>
-    <div class="row">
-    <div class="col s12">
-      <h4>Event Updates</h4>
-      <div class="card">
-        <div class="card-content">
-        <% project.events.each do |event| %>
-          <span class="card-title title"><%= event.title %></span>
-          <p><%= event.description %></p>
-          <p><strong><%= event.start_date.strftime("%B %d, %Y") %></strong></p>
-        <% end %>
+
+    <% if current_user and policy(Event).manage? %>
+      <div class="row">
+        <div class="col s12">
+          <div class="card">
+            <div class="card-content">
+              <h4 class="flow-text"><%= link_to 'Add New Event', new_project_event_path(project) %></h4>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    <% end %>
+
+    <div class="row">
+      <div class="col s12">
+        <h4 class="flow-text">Event Updates</h4>
+        <div class="card">
+          <div class="card-content">
+            <% project.events.each do |event| %>
+              <span class="card-title title flow-text">
+                <%= link_to event.title, project_event_path(project, event) %>
+              </span>
+              <p><%= event.description %></p>
+              <p><strong><%= event.start_date.strftime("%B %d, %Y") %></strong></p>
+            <% end %>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

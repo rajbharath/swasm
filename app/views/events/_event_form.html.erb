@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col s12 framed-form">
+    <%= form_for [project, event], html: { multipart: true } do |f| %>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= f.text_field :title %>
+          <%= f.label :title %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= f.text_area :description, class: "materialize-textarea" %>
+          <%= f.label :description %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= f.date_field :start_date, class: 'datepicker' %>
+          <%= f.label :start_date %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= f.date_field :end_date, class: 'datepicker' %>
+          <%= f.label :end_date %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="actions col s12">
+          <%= f.submit action_text, class: 'waves-effect waves-light btn' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

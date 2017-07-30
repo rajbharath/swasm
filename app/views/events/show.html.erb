@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col s12">
+    <div class="card event">
+      <div class="card-content">
+        <span class="card-title flow-text"><%= @event.title %>
+        <span class="flow-text sub-text">in <%= link_to @event.project.title, project_path(@event.project) %> <%= @event.start_date.strftime("%B %d, %Y") %></span>
+        </span>
+        <%= @event.description %>
+      </div>
+      <% if current_user and policy(Event).manage? %>
+        <div class="card-action">
+          <%= link_to 'Edit', edit_project_event_path(@event.project, @event) %>
+          <%= link_to 'Delete', project_event_path(@event.project, @event), method: :delete %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

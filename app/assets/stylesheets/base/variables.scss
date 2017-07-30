@@ -1,0 +1,18 @@
+// Overriding Materialize library variables
+$primary-color: #01BFBD !default;
+$secondary-color: #FFC105 !default;
+
+$footer-font-color: #fff !default;
+$footer-bg-color: #222 !default;
+$footer-copyright-font-color: rgba(255,255,255,.6) !default;
+$footer-copyright-bg-color: #111 !default;
+
+$card-link-color: $primary-color !default;
+$card-link-color-light: $secondary-color !default;
+
+// Custom Variables
+$background-color: #EEEEEE !default;
+$title: 12pt;
+$description: 9pt;
+$primary-font-color: #333333 !default;
+$secondary-font-color: #F7F9F8 !default;

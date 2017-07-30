@@ -1,0 +1,61 @@
+.project-overview.card {
+  :hover {
+    cursor: pointer;
+  }
+  .card-image img {
+    height: 150px;
+  }
+
+  .card-link {
+    color: black;
+  }
+
+  .card-content {
+    .card-title {
+      &.project-title {
+        font-size: $title;
+        font-weight: bold;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .project-description {
+      height: 50px;
+      font-size: $description;
+    }
+  }
+
+  .card-action {
+    padding: 0;
+    .stat-box {
+      padding: 20px;
+      width: 50%;
+      float: left;
+      font-size: 9pt;
+      text-align: center;
+      .volunteer-count {
+        font-size: 18pt;
+      }
+      &:last-child {
+        border-left: 1px #eee solid;
+      }
+    }
+  }
+}
+
+#new {
+  position: fixed;
+  bottom: 50px;
+  right: 150px;
+}
+
+
+#contribute-btn {
+  width: 100%;
+  background-color: $primary-color;
+  color: white;
+  font-size: 20pt;
+  font-weight: 300;
+  text-transform: capitalize;
+}
