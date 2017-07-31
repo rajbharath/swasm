@@ -1,7 +1,4 @@
 <ul id="<%= id %>" class="<%= class_names %>" >
-  <li class="<%= menu_active?('home') ? 'active' : nil %>" >
-    <%= link_to 'Home', root_path %>
-  </li>
   <li class="<%= menu_active?('about') ? 'active' : nil %>" >
     <%= link_to 'About', page_path('about') %>
   </li>
@@ -16,6 +13,9 @@
     <% end %>
     <li class="<%= menu_active?('my_projects') ? 'active' : nil %>" >
       <%= link_to('My Projects', user_projects_path(current_user)) %>
+    </li>
+    <li class="<%= menu_active?('profile') ? 'active' : nil %>" >
+     <%= link_to('Profile', user_path(current_user)) %>
     </li>
     <li class="<%= menu_active?('logout') ? 'active' : nil %>" >
      <%= link_to('Logout', destroy_user_session_path, method: :delete) %>

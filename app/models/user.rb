@@ -13,7 +13,8 @@ class User < ApplicationRecord
 
   validates_integrity_of  :avatar
   validates_processing_of :avatar
-
+  validates :mobile, presence: true, length: { is: 10 }
+  validates_format_of :mobile, with: /\A\d{10}\z/
   def set_default_role
     self.add_role :volunteer
   end

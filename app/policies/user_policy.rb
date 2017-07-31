@@ -4,19 +4,11 @@ class UserPolicy < ApplicationPolicy
     user.has_role? :admin
   end
 
-  def create?
-    user.has_role? :admin
-  end
-
-  def update?
-    user.has_role? :admin
-  end
-
-  def destroy?
-    user.has_role? :admin
+  def show?
+    user.has_role? :admin or user.id == record.id
   end
 
   def manage?
-    create? && update? && destroy?
+    user.has_role? :admin
   end
 end

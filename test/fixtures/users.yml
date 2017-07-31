@@ -4,3 +4,38 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
+valid_user:
+  username: 'Iamvalid'
+  email: 'valid@smartcity.org'
+  mobile: '9876543210'
+
+invalid_user_one:
+  username: 'Iaminvalid'
+  email: 'invalid1@smartcity.org'
+  mobile: '9876543'
+
+invalid_user_two:
+  username: 'Iaminvalid'
+  email: 'invalid2@smartcity.org'
+  mobile: '98765abcde'
+
+
+invalid_user_three:
+  username: 'Iaminvalid'
+  email: 'invalid3@smartcity.org'
+  mobile: '9876543210asd'
+
+invalid_user_four:
+  username: 'Iaminvalid'
+  email: 'invalid4@smartcity.org'
+  mobile: '987654321012313'
+
+invalid_user_five:
+  username: 'Iaminvalid'
+  email: 'invalid5@smartcity.org'
+  mobile: ''
+
+invalid_user_six:
+  username: 'Iaminvalid'
+  email: 'invalid6@smartcity.org'
+  mobile: 'asdasdasda'
