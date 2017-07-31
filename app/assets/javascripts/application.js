@@ -28,7 +28,7 @@ $(document).ready(function() {
       close: 'Ok',
       closeOnSelect: false // Close upon selecting a date,
     });
-
+   $(".dropdown-button").dropdown();
    $(".project-overview.card").on('click', function() {
     window.location.href = $(this).data("url");
    });

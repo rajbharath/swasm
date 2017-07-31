@@ -5,7 +5,7 @@
   $(document).ready(function() {
     $("#search_location").geocomplete()
                         .bind("geocode:result", function(event, result){
-                          console.log(result);
+                          this.form.submit();
                         });
 
     setTimeout(function(){

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SWASM - Sustainable WAter Security Mission</title>
+    <title>Chennai Smart City Portal &amp; Platform</title>
     <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -13,8 +13,15 @@
       <nav class="navbar">
         <div class="nav-wrapper">
           <a href="/" class="brand-logo">
-            <%= image_tag "govt_logo.png", class: 'responsive-img', id: 'govt_logo' %>
-            <span id="swasm" class='valign-wrapper right'>SWASM</span>
+            <%= image_tag "govt_logo.png", class: 'responsive-img left', id: 'govt_logo' %>
+            <div id="logo-text-wrapper" class="hide-on-small-only">
+              <div class="valign-wrapper">
+                <span id="logo-text">Chennai Smart City </span>
+              </div>
+              <div class="valign-wrapper">
+                <span id="tag-line">community engagement platform</span>
+              </div>
+            </div>
           </a>
           <a href="#!" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
           <%= render partial: 'layouts/navigations', locals: { id: "nav", class_names: "right hide-on-med-and-down" } %>
@@ -49,11 +56,16 @@
             </ul>
           </div>
         </div>
+        <div class="row">
+          <div class="col l6 s12">
+            <h5>Contact Us</h5>
+            <p class="grey-text text-lighten-4">chennaiwatermission@gmail.com</p>
+          </div>
+        </div>
       </div>
       <div class="footer-copyright">
         <div class="container">
         © 2017 Copyright
-        <a class="grey-text text-lighten-4 right" href="https://www.sahajsoft.com" target="_blank">developed and maintained by Sahaj</a>
         </div>
       </div>
     </footer>

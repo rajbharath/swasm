@@ -3,13 +3,30 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+
+  header {
+    height: auto;
+    width: auto;
+  }
+
   #govt_logo {
     width: 55px;
+    padding: 5px;
   }
-  #swasm {
+  #logo-text-wrapper {
+    padding: 5px;
     color: $primary-color;
-    font-weight: bold;
+    line-height: 1em;
+    height: 100%;
+    width: 50vw;
+    #logo-text {
+      font-weight: bold;
+    }
+    #tag-line {
+      @include font-size-small;
+    }
   }
+
 }
 
 .modal {

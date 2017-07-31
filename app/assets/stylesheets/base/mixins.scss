@@ -1,0 +1,17 @@
+@mixin font-size-small {
+    font-size: 10pt;
+}
+
+@mixin font-size-regular {
+    font-size: 15pt;
+}
+
+
+@mixin font-size-large {
+    font-size: 18pt;
+}
+
+@mixin font-size-x-large {
+    font-size: 24pt;
+}
+

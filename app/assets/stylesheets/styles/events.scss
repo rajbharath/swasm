@@ -1,5 +1,8 @@
-.event {
-  .sub-text {
-    font-size: 9pt;
+.card.event {
+  height: 400px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+ .event-date {
+    padding-bottom: 30px;
   }
 }
