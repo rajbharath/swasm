@@ -77,9 +77,19 @@ footer {
   }
 }
 
+.dropdown-button {
+  i.material-icons {
+    margin-left: 0px;
+  }
+}
 nav {
   height: 75px;
   background-color: white;
+  .nav-avatar {
+    width: 32px;
+    margin-top: 10px;
+  }
+
   ul {
     margin-right: 4%;
     margin-top: 10px;

@@ -7,19 +7,27 @@
     <%= link_to "Initiatives<i class='material-icons right'>arrow_drop_down</i>".html_safe, '#!', class: 'dropdown-button', 'data-activates': "initiatives-#{id}" %>
   </li>
   <% if user_signed_in? %>
-    <% if policy(User).manage? %>
-      <li class="<%= menu_active?('volunteers') ? 'active' : nil %>" >
-        <%= link_to('Volunteers', volunteers_path) %>
+    <ul id="profile-<%= id %>" class="dropdown-content">
+      <% if policy(User).manage? %>
+        <li class="<%= menu_active?('volunteers') ? 'active' : nil %>" >
+          <%= link_to('Volunteers', volunteers_path) %>
+        </li>
+      <% end %>
+      <li class="<%= menu_active?('my_projects') ? 'active' : nil %>" >
+        <%= link_to('Projects', user_projects_path(current_user)) %>
       </li>
-    <% end %>
-    <li class="<%= menu_active?('my_projects') ? 'active' : nil %>" >
-      <%= link_to('My Projects', user_projects_path(current_user)) %>
-    </li>
-    <li class="<%= menu_active?('profile') ? 'active' : nil %>" >
-     <%= link_to('Profile', user_path(current_user)) %>
-    </li>
-    <li class="<%= menu_active?('logout') ? 'active' : nil %>" >
-     <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+      <li class="<%= menu_active?('profile') ? 'active' : nil %>" >
+       <%= link_to('Profile', user_path(current_user)) %>
+      </li>
+      <li class="<%= menu_active?('logout') ? 'active' : nil %>" >
+       <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+      </li>
+    </ul>
+    <li class="" >
+      <a href="#!" class="dropdown-button" data-activates="profile-<%= id %>">
+        <%= image_tag current_user.avatar_url(:thumb), alt: "", class: "circle nav-avatar left" %>
+        <i class='material-icons right'>arrow_drop_down</i>
+      </a>
     </li>
   <% else %>
     <li class="<%= menu_active?('login') ? 'active' : nil %>" >
