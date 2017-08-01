@@ -70,3 +70,59 @@
 
 }
 
+#search-location-wrapper {
+  height: 100%;
+  width: 40%;
+  display: inline-block;
+  margin-left: 30%;
+  input {
+    line-height: 1em;
+    padding-left: 2rem;
+    height: 40px;
+    font-size: 8pt;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    color: black;
+    ~ .material-icons {
+      line-height: 1em;
+      display: block;
+      color: #222;
+      margin-top: 7px;
+      right: 4rem;
+    }
+    &:focus {
+      border: 1px solid #ccc;
+      box-shadow: none;
+    }
+  }
+
+}
+
+
+@media #{$medium-and-down} {
+  .container {
+    width: 90%
+  }
+
+  #search-location-wrapper {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 45%;
+  }
+}
+
+@media #{$small-and-down} {
+  #search-location-wrapper {
+    position: absolute;
+    width: 70%;
+    margin: auto;
+    left: 5%;
+    input {
+      padding-left: 1rem;
+      ~ .material-icons {
+        right: 3rem;
+      }
+    }
+  }
+}

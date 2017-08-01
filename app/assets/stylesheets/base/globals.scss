@@ -9,21 +9,31 @@ body {
     width: auto;
   }
 
+  .brand-logo {
+    margin-left: 4%;
+  }
+
   #govt_logo {
-    width: 55px;
+    width: 70px;
     padding: 5px;
   }
+
   #logo-text-wrapper {
+    margin-left: 60px;
+    margin-top: 8px;
     padding: 5px;
-    color: $primary-color;
+    color: $primary-font-color;
     line-height: 1em;
     height: 100%;
     width: 50vw;
     #logo-text {
-      font-weight: bold;
+      margin-bottom: -10px;
+      font-size: 18pt;
     }
     #tag-line {
+      text-transform: capitalize;
       @include font-size-small;
+      margin-left: 1px;
     }
   }
 
@@ -68,8 +78,11 @@ footer {
 }
 
 nav {
+  height: 75px;
   background-color: white;
   ul {
+    margin-right: 4%;
+    margin-top: 10px;
     li {
       background-color: white;
       a {
@@ -108,8 +121,45 @@ nav {
   color: $primary-color;
 }
 
-@media only screen and (min-width: 993px) {
+@media #{$large-and-up} {
   .container {
     width: 90%
+  }
+  .dropdown-content {
+    top: 74px !important;
+    li {
+      min-height: 35px;
+      a {
+        color: $primary-font-color;
+        font-size: 1rem;
+        line-height: 10px;
+        &:hover {
+          background-color: white;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+@media #{$medium-and-down} {
+  .container {
+    width: 90%
+  }
+
+  nav {
+    .brand-logo {
+      left: 2%;
+      transform: none;
+    }
+  }
+}
+
+@media #{$small-and-down} {
+  nav {
+    .brand-logo {
+      left: 77%;
+      transform: none;
+    }
   }
 }

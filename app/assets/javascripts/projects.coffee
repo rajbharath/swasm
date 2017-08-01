@@ -11,6 +11,7 @@
     setTimeout(function(){
       Materialize.updateTextFields();
     });
+
     $("#project_location").on("click", function(){
        $("#modal1").modal('open');
 
