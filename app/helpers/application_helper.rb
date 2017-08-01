@@ -1,5 +1,4 @@
 module ApplicationHelper
-
   def menu_active?(menu_item_name)
     case menu_item_name
       when 'my_projects'
@@ -15,5 +14,9 @@ module ApplicationHelper
       when 'about', 'contact'
         current_page? page_path(menu_item_name)
     end
+  end
+
+  def css_class_for_project_status(project_status)
+    Project.statuses.keys.include?(project_status) ? project_status.tr('_', '-') : ""
   end
 end

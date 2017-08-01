@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170731055506) do
+ActiveRecord::Schema.define(version: 20170801103256) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20170731055506) do
     t.geography "location", limit: {:srid=>4326, :type=>"st_point", :geographic=>true}
     t.hstore "specifications"
     t.text "plan"
+    t.integer "status", default: 0
     t.index ["location"], name: "index_projects_on_location", using: :gist
     t.index ["specifications"], name: "index_projects_on_specifications", using: :gin
   end

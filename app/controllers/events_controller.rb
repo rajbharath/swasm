@@ -37,7 +37,7 @@ class EventsController < ApplicationController
   end
 
   def destroy
-    Event.find(params[:id]).destroy_all
+    Event.find(params[:id]).destroy
     redirect_to project_path(params[:project_id])
   end
 

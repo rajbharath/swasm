@@ -31,12 +31,25 @@
           </div>
         </div>
       </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <%= f.select(:status) do %>
+            <% Project.statuses.to_a.each do |status| -%>
+              <%= content_tag(:option, status.first.humanize, value: status.first, selected: project.status == status.first) %>
+            <% end %>
+          <% end %>
+          <%= f.label :status %>
+        </div>
+      </div>
+
       <div class="row">
         <div class="input-field col s12">
           <%= f.text_field :location, readonly: '', class: 'black-text' %>
           <%= f.label :location %>
         </div>
       </div>
+
       <div class="row">
         <div class="input-field col s12">
           <%= text_field_tag :location_name, '', readonly: '', class: 'black-text' %>

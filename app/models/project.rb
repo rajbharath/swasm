@@ -14,6 +14,8 @@ class Project < ApplicationRecord
 
   mount_uploader :image, ImageUploader
 
+  enum status: { yet_to_start: 0, in_progress: 1, completed: 2 }
+
   # For mapping user to a resource we resourcify a model - authorization purpose
   resourcify
 
