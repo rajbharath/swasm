@@ -11,8 +11,6 @@ module ApplicationHelper
         current_page? destroy_user_session_path
       when 'profile'
         (current_page? user_path(current_user)) or (current_page? edit_user_registration_path)
-      when 'about', 'contact'
-        current_page? page_path(menu_item_name)
     end
   end
 
