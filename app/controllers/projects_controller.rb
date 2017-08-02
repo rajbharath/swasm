@@ -22,7 +22,9 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    project = Project.new(project_params)
+    permitted_params = project_params
+    permitted_params[:specifications] = transform_specifications(project_params[:specifications])
+    project = Project.new(permitted_params)
     if project.save
       redirect_to action: :index
     else
@@ -36,8 +38,10 @@ class ProjectsController < ApplicationController
   end
 
   def update
+    permitted_params = project_params
+    permitted_params[:specifications] = transform_specifications(project_params[:specifications])
     project = Project.find_by(id: params[:id])
-    if project.update(project_params)
+    if project.update(permitted_params)
       redirect_to action: :show, id: project.id
     else
       flash[:error] = project.errors.full_messages
@@ -56,7 +60,15 @@ class ProjectsController < ApplicationController
 
   protected
   def project_params
-    params.require(:project).permit :title, :description, :is_active, :location, :image, :plan, :status
+    params.require(:project).permit :title, :description, :is_active, :location, :image, :plan, :status, specifications: [:name, :value]
+  end
+
+  def transform_specifications(raw_specifications)
+    specifications = Hash.new
+    raw_specifications.each do |raw_specification|
+      specifications[raw_specification['name']] = raw_specification['value'] unless (raw_specification['name'].empty? || raw_specification['value'].empty?)
+    end
+    specifications
   end
 
   def authorize_user_project

@@ -37,26 +37,12 @@
     <div class="card">
       <div class="card-content center-align">
         <div class="row">
-          <div class="col info-box">
-            <h4><%= project.specifications[:area] %></h4>
-            <span>Area</span>
-          </div>
-          <div class="col info-box">
-            <h4><%= project.specifications[:bod] %></h4>
-            <span>BOD</span>
-          </div>
-          <div class="col info-box">
-            <h4><%= project.specifications[:cod] %></h4>
-            <span>COD</span>
-          </div>
-          <div class="col info-box">
-            <h4><%= project.specifications[:ph] %></h4>
-            <span>Ph</span>
-          </div>
-          <div class="col info-box">
-            <h4><%= project.specifications[:budget] %></h4>
-            <span>Budget</span>
-          </div>
+          <% project.specifications.each do |name, value| %>
+            <div class="col info-box">
+              <h4><%= value %></h4>
+              <span><%= name %></span>
+            </div>
+          <% end %>
         </div>
       </div>
       <div class="card-action">

@@ -3,6 +3,7 @@
 # Create Admin user
 admin = User.create!({
     email: Rails.configuration.secrets['admin_email'],
+    mobile: '9876543210',
     password: Rails.configuration.secrets['password'],
     password_confirmation: Rails.configuration.secrets['password']
   })
@@ -13,21 +14,25 @@ admin.add_role :admin
 User.create!([
   {
     email: 'v1@smartcity.org',
+    mobile: '9876543210',
     password: 'passc0de',
     password_confirmation: 'passc0de'
   },
   {
     email: 'v2@smartcity.org',
+    mobile: '9876543210',
     password: 'passc0de',
     password_confirmation: 'passc0de'
   },
   {
     email: 'v3@smartcity.org',
+    mobile: '9876543210',
     password: 'passc0de',
     password_confirmation: 'passc0de'
   },
   {
     email: 'v4@smartcity.org',
+    mobile: '9876543210',
     password: 'passc0de',
     password_confirmation: 'passc0de'
   }

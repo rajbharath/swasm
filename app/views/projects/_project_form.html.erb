@@ -42,6 +42,23 @@
           <%= f.label :status %>
         </div>
       </div>
+      <div class="row">
+        <div class="row">
+          <div class="input-field col s12">
+            <%= f.label :specifications %>
+          </div>
+        </div>
+        <% (1..6).each do |i| %>
+          <div class="row">
+            <div class="input-field col s12 m6">
+              <%= text_field_tag 'project[specifications][][name]', '', placeholder: 'Property Name E.g. Area (in acre)'  %>
+            </div>
+            <div class="input-field col s12 m6">
+              <%= text_field_tag 'project[specifications][][value]', '', placeholder: 'Property Value E.g. 2' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
 
       <div class="row">
         <div class="input-field col s12">

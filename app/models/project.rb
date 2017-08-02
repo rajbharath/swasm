@@ -6,7 +6,7 @@ class Project < ApplicationRecord
   validates :is_active, presence: true
   validates :image, presence: true
   validates :location, presence: true
-  serialize :specifications, ProjectSpecifications
+  store_accessor :specifications
 
   has_many :volunteerships
   has_many :volunteers, through: :volunteerships, source: :user
