@@ -62,6 +62,23 @@ main {
 
 footer {
   font-weight: 100;
+
+  .col.footer_logo {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .white-bg {
+    background-color: white;
+  }
+
+  .footer_text {
+    font-size: 8pt;
+    text-align: justify;
+    text-justify: inter-word;
+  }
 }
 
 .links {
