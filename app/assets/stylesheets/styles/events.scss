@@ -1,8 +1,59 @@
-.card.event {
-  height: 400px;
-  overflow-x: hidden;
-  overflow-y: scroll;
- .event-date {
-    padding-bottom: 30px;
+.card {
+  .project-dashboard {
+
+    .card {
+      box-shadow: none;
+      padding: 5px;
+    }
+
+    .project-dashboard-item {
+      height: auto;
+      margin: auto;
+      padding: 10px;
+      h4 {
+        margin: 0;
+        border-bottom: 1px solid #ddd;
+        font-family: 'Roboto Slab';
+      }
+      span {
+        color: #666;
+        font-size: 8pt;
+      }
+    }
+  }
+  .card-header {
+    border-bottom: 1px solid #ccc;
+    padding: 15px;
+    font-size: 14pt;
+    background-color: #ddd;
+  }
+  .events {
+    max-height: 400px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    .event {
+      padding: 20px 0 20px 0;
+      border-bottom: 1px solid #ccc;
+      &:first-child {
+        padding-top: 0;
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+      .title {
+        font-size: 12pt;
+        font-weight: normal;
+        a {
+          color: black;
+        }
+      }
+      .description {
+        font-size: 10pt;
+        color: #666;
+      }
+      .event-date {
+        font-size: 8pt;
+      }
+    }
   }
 }

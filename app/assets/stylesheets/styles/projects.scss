@@ -17,6 +17,19 @@ span.badge {
     background-color: green;
   }
 }
+
+.project-detail {
+  .project-title {
+    font-size: 18pt;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+  .project-description {
+    color: #666;
+    padding-left: 13px;
+  }
+}
+
 .project-overview.card {
   :hover {
     cursor: pointer;
