@@ -30,6 +30,29 @@ span.badge {
   }
 }
 
+.card-content.project-image {
+  padding: 0;
+}
+
+.project-image-tabs {
+  li {
+    background-color: #ddd;
+    &.tab a {
+      color: #666;
+      text-transform: capitalize;
+      &.active {
+        background-color: white;
+      }
+    }
+  }
+  li:first-child {
+    border-right: 1px solid #aaa;
+  }
+  .indicator {
+    display: none;
+  }
+}
+
 .project-overview.card {
   :hover {
     cursor: pointer;

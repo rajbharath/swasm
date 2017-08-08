@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170801103256) do
+ActiveRecord::Schema.define(version: 20170808111725) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,11 +35,12 @@ ActiveRecord::Schema.define(version: 20170801103256) do
     t.boolean "is_active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "image"
+    t.string "image_before"
     t.geography "location", limit: {:srid=>4326, :type=>"st_point", :geographic=>true}
     t.hstore "specifications"
     t.text "plan"
     t.integer "status", default: 0
+    t.string "image_after"
     t.index ["location"], name: "index_projects_on_location", using: :gist
     t.index ["specifications"], name: "index_projects_on_specifications", using: :gin
   end

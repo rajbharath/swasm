@@ -4,7 +4,7 @@ class Project < ApplicationRecord
   validates :title, presence: true
   validates :description, presence: true
   validates :is_active, presence: true
-  validates :image, presence: true
+  validates :image_before, presence: true
   validates :location, presence: true
   store_accessor :specifications
 
@@ -12,7 +12,8 @@ class Project < ApplicationRecord
   has_many :volunteers, through: :volunteerships, source: :user
   has_many :events
 
-  mount_uploader :image, ImageUploader
+  mount_uploader :image_before, ImageUploader
+  mount_uploader :image_after, ImageUploader
 
   enum status: { yet_to_start: 0, in_progress: 1, completed: 2 }
 

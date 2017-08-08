@@ -60,7 +60,7 @@ class ProjectsController < ApplicationController
 
   protected
   def project_params
-    params.require(:project).permit :title, :description, :is_active, :location, :image, :plan, :status, specifications: [:name, :value]
+    params.require(:project).permit :title, :description, :is_active, :location, :image_before, :image_after, :plan, :status, specifications: [:name, :value]
   end
 
   def transform_specifications(raw_specifications)

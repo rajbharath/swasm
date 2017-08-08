@@ -23,15 +23,25 @@
       <div class="row">
         <div class="file-field input-field col s12">
           <div class="btn">
-            <span>Image</span>
-            <%= f.file_field :image %>
+            <span>Image Before</span>
+            <%= f.file_field :image_before %>
           </div>
           <div class="file-path-wrapper">
-            <%= text_field_tag '', project.image_url.to_s, class: "file-path" %>
+            <%= text_field_tag '', project.image_before_url.to_s, class: "file-path" %>
           </div>
         </div>
       </div>
-
+      <div class="row">
+        <div class="file-field input-field col s12">
+          <div class="btn">
+            <span>Image After</span>
+            <%= f.file_field :image_after %>
+          </div>
+          <div class="file-path-wrapper">
+            <%= text_field_tag '', project.image_after_url.to_s, class: "file-path" %>
+          </div>
+        </div>
+      </div>
       <div class="row">
         <div class="input-field col s12">
           <%= f.select(:status) do %>

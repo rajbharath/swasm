@@ -6,7 +6,16 @@
   <div class="col s12 m8">
     <div class="card">
       <div class="card-image">
-        <%= image_tag(project.image) %>
+        <div class="card-tabs project-image-tabs">
+          <ul class="tabs tabs-fixed-width">
+            <li class="tab"><a class="active" href="#before">Then</a></li>
+            <li class="tab"><a href="#after">Now</a></li>
+          </ul>
+        </div>
+        <div class="card-content grey lighten-4 project-image">
+          <div id="before"><%= image_tag(project.image_before) %></div>
+          <div id="after"><%= image_tag(project.image_after) %></div>
+        </div>
       </div>
       <div class="card-content">
         <span class="card-title">Restoration Plan</span>
@@ -57,7 +66,10 @@
       <div class="col s12">
         <div class="card">
           <div class="card-header">
-            Event Updates <%= link_to_if (current_user and policy(Event).manage?),'<i class="material-icons right">add</i>'.html_safe, new_project_event_path(project) %>
+            Event Updates
+            <% if current_user and policy(Event).manage? %>
+              <%= link_to '<i class="material-icons right">add</i>'.html_safe, new_project_event_path(project) %>
+            <% end %>
           </div>
           <div class="card-content events">
             <% project.events.each do |event| %>
