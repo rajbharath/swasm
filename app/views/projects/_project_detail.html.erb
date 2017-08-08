@@ -66,7 +66,7 @@
       <div class="col s12">
         <div class="card">
           <div class="card-header">
-            Event Updates
+            Project Updates
             <% if current_user and policy(Event).manage? %>
               <%= link_to '<i class="material-icons right">add</i>'.html_safe, new_project_event_path(project) %>
             <% end %>
